@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:text="123"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@id/date_text"
+        android:layout_margin="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/middle_grey"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+
+        android:background="@color/light_grey">
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:id="@+id/cute_image"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/blank"
+            android:layout_alignParentRight="false"
+            android:layout_alignWithParentIfMissing="false"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:id="@+id/mum"
+            android:orientation="horizontal"
+            android:layout_marginTop="150dp"
+            android:layout_alignParentLeft="true">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/blank"
+                android:id="@+id/mum_icon"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+
+                android:id="@+id/mum_name" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/mum"
+            android:layout_gravity="bottom"
+            android:id="@+id/cute_text"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

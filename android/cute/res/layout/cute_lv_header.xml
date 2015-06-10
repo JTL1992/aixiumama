@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/linear"
+    android:layout_marginTop="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="您的cute数为"
+
+
+        android:id="@+id/textView"
+        android:layout_marginRight="10dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/pink"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:id="@+id/cute_num" />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:id="@+id/cute_info"
+
+            android:layout_below="@+id/linearLayout"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+</RelativeLayout>

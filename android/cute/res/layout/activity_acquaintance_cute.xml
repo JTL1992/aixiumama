@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+<com.harmazing.aixiumama.view.TitleWidget
+    android:id="@+id/title"
+    xmlns:cute="http://schemas.android.com/apk/res/com.harmazing.aixiumama"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    cute:left_visibility="visible"
+    cute:right_visibility="invisble"
+    cute:center_view_text="了解爱秀妈妈"
+    android:visibility="visible" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/title"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:focusable="true"
+            android:id="@+id/textView"
+            android:layout_below="@+id/title"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="@string/acquaintance_cute"
+            android:layout_margin="20dp"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+           />
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+    <GridView
+
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="5dp"
+        android:horizontalSpacing="5dp"
+        android:columnWidth="80dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:id="@+id/gridview_user"
+        android:fadeScrollbars="true"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:id="@+id/user_no_more"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative_brand"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:text="相关品牌"/>
+
+    <GridView
+
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="5dp"
+        android:horizontalSpacing="5dp"
+        android:columnWidth="80dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:id="@+id/gridview_brand"
+        android:fadeScrollbars="true"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:id="@+id/brand_no_more"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative_label"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:text="相关标签"/>
+
+</LinearLayout>

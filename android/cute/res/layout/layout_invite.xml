@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@null">
+<com.harmazing.aixiumama.view.TitleWidget
+    android:id="@+id/titleBar"
+    xmlns:cute="http://schemas.android.com/apk/res/com.harmazing.aixiumama"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    cute:left_visibility="visible"
+    cute:right_visibility="invisble"
+    cute:center_view_text="邀请好友"
+    android:visibility="visible"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/titleBar"
+        android:id="@+id/search_layout">
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:background="@color/light_grey"
+            android:id="@+id/search">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/image_search"
+                android:background="@drawable/icon_search"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edit_search"
+                android:layout_toRightOf="@+id/image_search"
+                android:hint="搜索好友"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:background="@null"
+                android:gravity="left"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="搜索"
+            android:id="@+id/text_search"
+            android:layout_toRightOf="@+id/search"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/pink"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/search_layout"
+        android:background="@color/light_grey"
+        android:id="@+id/platform">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="平 台"
+            android:id="@+id/text_platform"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:id="@+id/listView"
+        android:layout_below="@+id/platform"
+        android:listSelector="@android:color/transparent"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/list"
+        android:layout_below="@+id/platform" />
+</RelativeLayout>

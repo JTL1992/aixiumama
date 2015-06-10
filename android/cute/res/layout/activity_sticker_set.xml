@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.harmazing.aixiumama.activity.StickerSetActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/top_view"
+        android:layout_alignParentTop="true"
+        android:background="@color/black"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/back"
+            android:layout_marginLeft="10dp"
+
+            android:src="@drawable/title_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+
+            android:text="贴纸库"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+
+
+    </RelativeLayout>
+
+    <GridView
+        android:layout_below="@+id/top_view"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="5dp"
+        android:horizontalSpacing="5dp"
+        android:columnWidth="80dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:id="@+id/gridview"
+        android:fadeScrollbars="true"
+
+        />
+
+</RelativeLayout>

@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.harmazing.aixiumama"
+    android:versionCode="1"
+    android:versionName="1.0.0" >
+    <uses-sdk android:minSdkVersion="14" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_FRAME_BUFFER"/>
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+    <!-- 录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <application
+        android:name="com.harmazing.aixiumama.application.CuteApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!--
+		////////////////////////////////////////////////////////////////////
+		// qq登录配置开始
+		///////////////////////////////////////////////////////////////////
+        -->
+
+        <activity android:name="com.tencent.connect.avatar.ImageActivity" />
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+               <!-- <data android:scheme="tencent1104074570"/>-->
+               <!-- <data android:scheme="tencent1103396138" />-->
+
+                 <data android:scheme="tencent1104440143" />
+            </intent-filter>
+        </activity>
+        <!--
+		////////////////////////////////////////////////////////////////////
+		// qq登录配置结束
+		///////////////////////////////////////////////////////////////////
+        -->
+        <!--<友盟配置>-->
+        <meta-data android:value="55012b74fd98c50a45001140" android:name="UMENG_APPKEY"></meta-data>
+        <meta-data android:value="xiaomishichang" android:name="UMENG_CHANNEL"/>
+        <!--<meta-data android:value="Wandoujia" android:name="UMENG_CHANNEL"/>-->
+       <!-- <meta-data android:value="Xiaomishangdian" android:name="UMENG_CHANNEL"/>
+        <meta-data android:value="Yingyongbao" android:name="UMENG_CHANNEL"/>
+        <meta-data android:value="91" android:name="UMENG_CHANNEL"/>-->
+        <activity android:name="com.harmazing.aixiumama.activity.ActivityActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.harmazing.aixiumama.activity.SplashActivity"
+            android:screenOrientation="portrait">
+        <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.ActivityGallery"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.CameraActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.harmazing.aixiumama.activity.StartActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" >
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="CuteBaby"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.UserProfileStart"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.TabHostActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.cute.broadcast"/>
+            </intent-filter>
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.PhotoDetailActivity"
+            android:exported="true"
+            android:label="@string/title_activity_photo_detail"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="cuteurl" />
+                <!-- <data android:scheme="tencent222222"/> -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.AddLabelActivity"
+            android:label="@string/title_activity_add_label"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.CropImageActivity"
+            android:label="@string/title_activity_crop_image"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.SearchResultsActivity"
+            android:label="@string/title_activity_search_results"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.harmazing.aixiumama.activity.SearchResultsActivity2"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <receiver android:name="com.harmazing.aixiumama.service.MyPushMessageReceiver" >
+            <intent-filter>
+
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+        <!-- 用于接收系统消息以保证PushService正常运行 -->
+        <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+            </intent-filter>
+        </receiver>
+        <!-- Push服务接收客户端发送的各种请求 -->
+        <!-- 注意：RegistrationReceiver在2.1.1及之前版本有拼写失误，为RegistratonReceiver，用新版本SDK时请更改为如下代码 -->
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Push 服务 -->
+        <!-- 注意：在4.0 (包含)之后的版本需加上如下所示的intent-filter action -->
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+        <!-- push service end -->
+        <service
+            android:name="com.harmazing.aixiumama.service.CuteService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.harmazing.aixiumama.service.CuteService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.harmazing.aixiumama.activity.LabelFansActivity"
+            android:label="@string/title_activity_label_fans"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.StickersActivity"
+            android:label="@string/title_activity_stickers"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.HotStickersActivity"
+            android:label="@string/title_activity_hot_stickers"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.LabelActivity"
+            android:label="@string/title_activity_label"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.PersonActivity"
+            android:label="@string/title_activity_person"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.AttentionActivity"
+            android:label="@string/title_activity_attention"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.AttentionLabelActivity"
+            android:label="@string/title_activity_attention_label"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.VisitHistoryActivity"
+            android:label="@string/title_activity_visit_history"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.harmazing.aixiumama.activity.UserFansActivity"
+            android:label="@string/title_activity_user_fans"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.UserSettingAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.harmazing.aixiumama.activity.AcquaintanceCuteAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.harmazing.aixiumama.activity.LikeCuteAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.harmazing.aixiumama.activity.ProtocolAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.harmazing.aixiumama.activity.AdviceAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.harmazing.aixiumama.activity.NotifyAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.harmazing.aixiumama.activity.EditPersonDataAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.harmazing.aixiumama.activity.InviteFriendsAty"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.CuteMostActivity"
+            android:label="@string/title_activity_cute_most"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.StickerSetActivity"
+            android:label="@string/title_activity_sticker_set"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.harmazing.aixiumama.activity.InteractiveAty"
+            android:screenOrientation="portrait" />
+        <!-- <meta-data android:name="api_key" android:value="FyBMZaTfjiev6L45q9ROgZvR" /> -->
+        <meta-data
+            android:name="api_key"
+            android:value="hu2vtFG2NGDh0fb7Bo2a6lRb" />
+            <!--android:value="FyBMZaTfjiev6L45q9ROgZvR" />-->
+        <!-- 融云 Rong Cloud App Key 设置开始 -->
+
+        <meta-data android:name="RONG_CLOUD_APP_KEY" android:value="ik1qhw091duap" />
+
+        <!-- 融云 Rong Cloud App Key 设置结束 -->
+
+        <activity
+            android:name="com.harmazing.aixiumama.activity.MajiaAty"
+            android:label="@string/title_activity_majia_aty"
+            android:screenOrientation="portrait" >
+        </activity>
+
+
+
+
+        <activity android:name="com.harmazing.aixiumama.activity.PresentActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.harmazing.aixiumama.activity.CuteRankActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.harmazing.aixiumama.activity.MyCuteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.harmazing.aixiumama.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.harmazing.aixiumama.activity.MyCutePhotoActivity"
+            android:screenOrientation="portrait" />
+
+<!--rongyun-->
+
+        <service android:name="io.rong.imlib.RongService" />
+
+        <activity
+            android:name="io.rong.imkit.RongActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.harmazing.aixiumama"
+                    android:pathPrefix="/conversationsetting/"
+                    android:scheme="rong" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.harmazing.aixiumama"
+                    android:path="/grouplist"
+                    android:scheme="rong" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.harmazing.aixiumama"
+                    android:path="/conversationgrouplist"
+                    android:scheme="rong" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.harmazing.aixiumama"
+                    android:pathPrefix="/friend/"
+                    android:scheme="rong" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="io.rong.imkit.RongSingleActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.harmazing.aixiumama"
+                    android:path="/conversationlist"
+                    android:scheme="rong"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="io.rong.imkit.RongSecActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.harmazing.aixiumama"
+                    android:pathPrefix="/conversation/private"
+                    android:scheme="rong" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.harmazing.aixiumama"
+                    android:pathPrefix="/conversation/chatroom"
+                    android:scheme="rong" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.harmazing.aixiumama"
+                    android:pathPrefix="/conversation/group"
+                    android:scheme="rong" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.harmazing.aixiumama"
+                    android:pathPrefix="/conversation/discussion"
+                    android:scheme="rong" />
+            </intent-filter>
+            <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <data
+                android:host="com.harmazing.aixiumama"
+                android:pathPrefix="/conversation/system"
+                android:scheme="rong" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.harmazing.aixiumama"
+                    android:pathPrefix="/conversation/customer_service"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="io.rong.voipkit.activity.CallSideActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="io.rong.voipkit.activity.CalledSideActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="io.rong.voipkit.calledSideActivity.action" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.harmazing.aixiumama"
+                    android:path="/calledsideactivity"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+
+        <service
+            android:name="io.rong.imkit.service.RongIMService"
+            android:enabled="true"
+            android:exported="false"
+            android:priority="1000"></service>
+
+        <service
+            android:name="io.rong.imlib.push.PushService"
+            android:process="io.rong.push">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="io.rong.push" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="io.rong.imlib.push.CommandService"
+            android:process="io.rong.push">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="io.rong.command" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="io.rong.imlib.push.PushReceiver"
+            android:process="io.rong.push">
+            <intent-filter>
+                <action android:name="io.rong.imlib.action.push.heartbeat" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+
+        <receiver android:name="io.rong.imlib.push.PushMessageReceiver">
+
+            <intent-filter>
+                <action android:name="io.rong.push.message" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- End Rong Cloud -->
+    </application>
+
+</manifest>

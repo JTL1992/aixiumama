@@ -1,0 +1,22 @@
+apply plugin: 'com.android.library'
+apply from: 'gradle-mvn-push.gradle'
+
+ext.emojiconVersionName = "1.1-SNAPSHOT"
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.0.1"
+
+    defaultConfig {
+        minSdkVersion 7
+        targetSdkVersion 21
+        versionCode 1
+        versionName emojiconVersionName
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile files('src/main/libs/android-support-v4.jar')
+}

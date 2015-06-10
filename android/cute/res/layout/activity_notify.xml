@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+<com.harmazing.aixiumama.view.TitleWidget
+    xmlns:cute="http://schemas.android.com/apk/res/com.harmazing.aixiumama"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    cute:left_visibility="visible"
+    cute:right_visibility="invisble"
+    cute:center_view_text="新消息通知"
+    android:visibility="visible"
+    android:id="@+id/title_notify" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/title_notify"
+        android:id="@+id/vocie">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="声 音"
+            android:id="@+id/text_vocie"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+        <com.harmazing.aixiumama.view.SlipButton
+            android:layout_height="32dp"
+            android:layout_width="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentEnd="false"
+            android:layout_centerVertical="true"
+            android:id="@+id/btn_voice" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/vocie"
+        android:id="@+id/zhendong">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="震 动"
+            android:id="@+id/text_noice"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+        <com.harmazing.aixiumama.view.SlipButton
+            android:layout_height="32dp"
+            android:layout_width="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentEnd="false"
+            android:layout_centerVertical="true"
+            android:id="@+id/btn_shake" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/zhendong"
+        android:id="@+id/avoid_niose">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="夜间防骚扰（22:00 - 8:00）"
+            android:id="@+id/text_avoid_noice"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+        <com.harmazing.aixiumama.view.SlipButton
+            android:layout_height="32dp"
+            android:layout_width="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentEnd="false"
+            android:layout_centerVertical="true"
+            android:id="@+id/btn_avoid_noise" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

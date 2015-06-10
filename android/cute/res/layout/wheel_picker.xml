@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+    <View
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/flage" />
+      <com.widget.WheelView android:id="@+id/country"
+        android:layout_height="110dp"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+          android:visibility="gone" />
+	
+	<com.widget.WheelView android:id="@+id/city1"
+		android:layout_height="110dp"
+		android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical"
+		android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:layout_alignRight="@+id/city" />
+
+    <com.widget.WheelView android:id="@+id/area1"
+        android:layout_height="110dp"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:layout_marginRight="10dp"
+        android:visibility="gone" />
+
+    <NumberPicker
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/city"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentLeft="false"
+        android:layout_centerInParent="true"
+        android:layout_alignRight="@+id/flage"
+        android:layout_marginRight="20dp" />
+
+    <NumberPicker
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/area"
+        android:layout_gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/flage"
+        android:layout_marginLeft="20dp" />
+
+</RelativeLayout>

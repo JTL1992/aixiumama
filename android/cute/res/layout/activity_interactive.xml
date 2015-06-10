@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/login_topbg"
+        android:id="@+id/title_cuted_comment">
+        <View
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:id="@+id/flag"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/left_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            style="@style/title_view_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="赞过"
+            android:id="@+id/text_cuted"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_toLeftOf="@+id/flag"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="评论过"
+            android:id="@+id/text_commented"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/flag"
+            android:layout_marginLeft="40dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="2dp"
+        android:background="@color/pink"
+        android:id="@+id/pink_line1"
+        android:layout_toLeftOf="@+id/flag1"
+        android:layout_below="@+id/title_cuted_comment"
+        android:layout_marginRight="48dp" />
+    <View
+        android:layout_width="40dp"
+        android:layout_height="2dp"
+        android:background="@color/pink"
+        android:id="@+id/pink_line2"
+        android:layout_below="@+id/title_cuted_comment"
+        android:layout_toRightOf="@+id/flag1"
+        android:layout_marginLeft="48dp"
+        android:visibility="invisible" />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/flag1"
+        android:layout_centerHorizontal="true" />
+    <android.support.v4.view.ViewPager
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/pink_line2"
+        android:id="@+id/mViewPager" />
+</RelativeLayout>

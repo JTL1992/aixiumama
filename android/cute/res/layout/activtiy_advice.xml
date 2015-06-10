@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+<com.harmazing.aixiumama.view.TitleWidget
+    android:id="@+id/title_advice"
+    xmlns:cute="http://schemas.android.com/apk/res/com.harmazing.aixiumama"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    cute:left_visibility="visible"
+    cute:right_visibility="visible"
+    cute:right_view_text="提交"
+    cute:center_view_text="意见反馈"
+    android:visibility="visible"
+     />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/advice_describtion"
+        android:id="@+id/text_miaoshu"
+        android:layout_below="@+id/title_advice"
+        android:layout_margin="16dp"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="问题描述"
+        android:id="@+id/text_wentimiaoshu"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:layout_below="@+id/text_miaoshu"
+        android:layout_alignLeft="@+id/text_miaoshu" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/edit_advice"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/text_wentimiaoshu"
+        android:background="@color/light_grey"
+        android:hint="请在这里输入您的宝贵意见"
+        android:textColorHint="@color/grey"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:gravity="top"
+        android:layout_above="@+id/text_futu" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="附图"
+        android:id="@+id/text_futu"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:layout_marginLeft="20dp"
+        android:layout_above="@+id/image_advice" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/image_advice"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/icon_circle_title" />
+
+</RelativeLayout>

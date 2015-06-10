@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+<com.harmazing.aixiumama.view.TitleWidget
+    android:id="@+id/title_likecute"
+    xmlns:cute="http://schemas.android.com/apk/res/com.harmazing.aixiumama"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    cute:left_visibility="visible"
+    cute:right_visibility="invisible"
+    cute:center_view_text="好评得奖"
+    android:visibility="visible" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/like_cute"
+        android:id="@+id/text_haoping"
+        android:layout_below="@+id/title_likecute"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_margin="20dp" />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="去好评，拿大奖"
+        android:id="@+id/button"
+        android:layout_below="@+id/text_haoping"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_haoping"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/famous_label"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/blank"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/label_icon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:layout_below="@+id/label_icon"
+            android:textColor="@color/black"
+            android:id="@+id/label_text"
+            android:layout_margin="10dp"
+            android:layout_alignParentLeft="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/label_text"
+            android:background="@color/white"
+            android:id="@+id/view" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/button_pink"
+
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/view"
+            android:layout_alignLeft="@+id/label_text"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/fans_num" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/button_pink"
+            android:text="关注"
+            android:textSize="15sp"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:padding="5dp"
+            android:id="@+id/att_label"
+            android:layout_below="@+id/view"
+            android:layout_alignRight="@+id/label_text" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/bar"
+        android:orientation="horizontal"
+        android:layout_below="@+id/famous_label"
+
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/the_most"
+            android:background="@drawable/button_transparent"
+            android:text="最  新"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/the_new"
+            android:background="@drawable/button_transparent"
+            android:layout_weight="1"
+            android:text="被赞最多"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="vertical"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+
+        android:id="@+id/search_top"
+        android:background="@drawable/cute_top_bg1"
+        >
+        <SearchView
+            android:layout_width="wrap_content"
+            android:id="@+id/search"
+            android:layout_alignParentLeft="true"
+            android:queryHint="搜索标签，品牌，用户"
+            android:background="@drawable/solid_white"
+            android:layout_height="30dp"
+
+            android:layout_toLeftOf="@+id/search_btn"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:textColor="@color/white"
+            android:text="搜索"
+            android:id="@+id/search_btn"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+
+    <!--热门标签ListView-->
+        <com.pullrefreshview.PullToRefreshListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search_top"
+            android:id="@+id/hot_label_pulltoreflushlistview"/>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_below="@+id/hot_label_pulltoreflushlistview"
+    android:background="@color/white"/>
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/cute/libs/pushservice-4.2.0.63.jar!/" />
+      <root url="jar://$PROJECT_DIR$/cute/libs/android-gif-drawable-1.1.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/cute/libs/Rong_IMKit_v1_4_1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/cute/libs/xUtils-2.6.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/cute/libs/universal-image-loader-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/cute/libs/umeng-analytics-v5.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/cute/libs/library.jar!/" />
+      <root url="jar://$PROJECT_DIR$/cute/libs/fastjson.jar!/" />
+      <root url="jar://$PROJECT_DIR$/cute/libs/gson-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/cute/libs/org.apache.httpcomponents.httpclient_4.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/cute/libs/libammsdk.jar!/" />
+      <root url="jar://$PROJECT_DIR$/cute/libs/open_sdk.jar!/" />
+      <root url="jar://$PROJECT_DIR$/cute/libs/android-async-http-1.4.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/cute/libs/weibosdkcore.jar!/" />
+      <root url="jar://$PROJECT_DIR$/cute/libs/mta-sdk-1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

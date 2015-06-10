@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/relativeLayout"
+        android:layout_below="@+id/top"
+        android:layout_alignParentLeft="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/att_label_layout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:text="关注的标签"
+                android:id="@+id/textView"
+                android:layout_toLeftOf="@+id/imageView" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/right_jt"
+                android:layout_alignBottom="@+id/textView"
+                android:id="@+id/imageView" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/att_label_layout"
+            android:id="@+id/att_layout"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+
+                android:id="@+id/att_label1"/>
+
+            <ImageView
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_marginLeft="10dp"
+
+                android:id="@+id/att_label2"/>
+
+            <ImageView
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_marginLeft="10dp"
+
+                android:id="@+id/att_label3"/>
+
+
+            <ImageView
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_marginLeft="10dp"
+
+                android:id="@+id/att_label4"/>
+
+        </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="关注的用户"
+        android:layout_below="@+id/att_layout"
+        android:id="@+id/text1"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp" />
+
+    </RelativeLayout>

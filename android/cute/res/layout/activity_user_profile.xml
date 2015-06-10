@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<com.harmazing.aixiumama.view.TitleWidget
+		android:id="@id/titleBar"
+        xmlns:cute="http://schemas.android.com/apk/res/com.harmazing.aixiumama"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		cute:left_visibility="visible"
+        cute:right_visibility="invisble"
+		cute:center_view_text="完善信息"
+		/>
+
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/edit_profile"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="50dp"
+		/>
+
+	<LinearLayout
+		android:layout_marginTop="16dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:weightSum="4"
+		android:paddingLeft="16dp"
+		android:paddingRight="16dp"
+		android:gravity="center_vertical"
+		>
+
+		<TextView
+			android:layout_weight="1"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:text="宝宝性别:"
+            android:textColor="#3c3c3c"
+			android:gravity="center"
+			/>
+
+		<Button
+			android:id="@+id/man"
+			android:layout_weight="1"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:background="@drawable/button_select"
+            android:textColor="#7a7a7a"
+			android:text="男"
+            android:textSize="15sp" />
+
+		<Button
+			android:id="@+id/feman"
+			android:layout_weight="1"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:background="@drawable/button_select"
+			android:layout_marginLeft="3dp"
+            android:textColor="#7a7a7a"
+			android:text="女"
+            android:textSize="15sp" />
+
+		<Button
+			android:id="@+id/other"
+			android:layout_weight="1"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:background="@drawable/button_select"
+			android:layout_marginLeft="3dp"
+            android:textColor="#7a7a7a"
+			android:text="未知"
+            android:textSize="15sp" />
+
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_marginTop="16dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:weightSum="4"
+		android:paddingLeft="16dp"
+		android:paddingRight="16dp"
+		android:gravity="center_vertical"
+		>
+
+		<TextView
+			android:layout_weight="1"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+            android:textColor="#3c3c3c"
+			android:text="生产/预产:"
+			android:gravity="center"
+			/>
+
+		<Button
+			android:id="@+id/choice"
+			android:layout_weight="3"
+			android:layout_width="0dp"
+            android:textColor="#c8c8c8"
+			android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:padding="10dp"
+			android:background="@drawable/button_press"
+			android:text="点我选择"/>
+
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/button_finish"
+		android:layout_marginTop="130dp"
+	    android:background="@drawable/button_pink"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_gravity="center"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+		android:text="完 成"
+		/>
+
+</LinearLayout>

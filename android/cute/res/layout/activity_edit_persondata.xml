@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/data">
+    <com.harmazing.aixiumama.view.TitleWidget
+        xmlns:cute="http://schemas.android.com/apk/res/com.harmazing.aixiumama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        cute:left_visibility="visible"
+        cute:right_visibility="visible"
+        cute:right_view_text="保存"
+        cute:center_view_text="编辑资料"
+        android:visibility="visible"
+        android:id="@+id/title_editData" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/title_editData"
+        android:background="@drawable/bg_person_data"
+        android:id="@+id/bg_person_data">
+
+        <com.harmazing.aixiumama.view.RoundedImageView
+            xmlns:cute="http://schemas.android.com/apk/res/com.harmazing.aixiumama"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/image_head"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            cute:corner_radius="10dp"
+            cute:round_background="true"
+            android:background="@drawable/icon_circle_title1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/bg_person_data"
+        android:id="@+id/change_image"
+        android:background="@color/light_grey">
+        <View
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_divider_person"
+            android:id="@+id/divider"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="更换头像照片"
+            android:id="@+id/text_change_head"
+            android:layout_toLeftOf="@+id/divider"
+            android:layout_marginRight="30dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="更换背景图片"
+            android:id="@+id/text_change_bg"
+            android:layout_toRightOf="@+id/divider"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/change_image"
+        android:id="@+id/name">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="名 字："
+            android:id="@+id/text_name"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/edit_name"
+            android:layout_toRightOf="@+id/text_name"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:background="@null" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/name"
+        android:id="@+id/sex">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="性 别："
+            android:id="@+id/text_sex"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_sex"
+
+            android:ems="10"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/text_sex"
+            android:background="@null"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/sex"
+        android:id="@+id/dir">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="所在地："
+            android:id="@+id/text_dir"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_dir"
+            android:layout_toRightOf="@+id/text_dir"
+            android:layout_centerVertical="true"
+            android:background="@null"
+
+
+            android:textColor="#000000"
+            android:textSize="18sp" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/dir"
+        android:id="@+id/abstrect">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="简 介："
+            android:id="@+id/text_abstract"
+            android:layout_marginLeft="20dp"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_abstract"
+
+            android:ems="10"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/text_abstract"
+            android:inputType="text" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/abstrect"
+        android:id="@+id/baby_sex">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="宝宝性别："
+            android:id="@+id/text_baby_sex"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_baby_sex"
+            android:layout_toRightOf="@+id/text_baby_sex"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:ems="10"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/baby_sex"
+        android:id="@+id/yuchan">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="宝宝预产/出生："
+            android:id="@+id/text_yuchan"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_yuchan"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:inputType="text"
+            android:ems="10"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/text_yuchan" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>

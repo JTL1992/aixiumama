@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.harmazing.aixiumama.activity.StickersActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/top"
+        android:orientation="horizontal"
+        android:background="@drawable/login_topbg">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/back"
+            android:src="@drawable/title_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:id="@+id/sticker_name"
+            android:text="贴纸名称"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <com.harmazing.aixiumama.view.BorderScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top"
+        android:id="@+id/borderScrollView">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <RelativeLayout
+        android:layout_below="@id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sticker"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/blank"
+            android:layout_alignParentTop="true"
+            android:id="@+id/sticker_icon"
+            android:scaleType="fitXY"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_below="@+id/sticker_icon"
+            android:textColor="@color/black"
+            android:id="@+id/sticker_text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/bar"
+        android:layout_below="@+id/sticker"
+        android:orientation="horizontal"
+
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/the_new"
+            android:background="@drawable/button_transparent"
+            android:text="最  新"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/the_most"
+            android:background="@drawable/button_transparent"
+            android:layout_weight="1"
+            android:text="被赞最多"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            />
+
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/bar"
+        android:layout_height="2dp"
+        android:background="@color/pink"/>
+
+    <GridView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="5dp"
+        android:horizontalSpacing="5dp"
+        android:columnWidth="80dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:id="@+id/gv_sticker_container"
+        android:fadeScrollbars="true"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:id="@+id/loading">
+        <include
+            layout="@layout/loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:id="@+id/no_more">
+        <include
+            layout="@layout/no_more"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
+    </com.harmazing.aixiumama.view.BorderScrollView>
+</RelativeLayout>

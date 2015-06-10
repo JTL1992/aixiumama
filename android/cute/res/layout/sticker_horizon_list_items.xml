@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:padding="5dp"
+    android:id="@+id/rl_sticker"
+    android:clickable="true"
+    android:layout_height="130dp">
+
+    <ImageView
+        android:id="@+id/sticker_image"
+        android:layout_gravity="center"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/blank"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/sticker_image"
+        android:id="@+id/sticker_name"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_alignRight="@+id/sticker_image"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/white"
+        android:background="#dbdbdb"
+        android:gravity="center" />
+
+
+</RelativeLayout>

@@ -1,0 +1,194 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.harmazing.aixiumama.activity.LabelActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/top"
+        android:orientation="horizontal"
+        android:background="@drawable/cute_top_bg1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/back"
+            android:src="@drawable/title_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:id="@+id/label_name"
+
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <com.harmazing.aixiumama.view.BorderScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/borderScrollView">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:id="@+id/famous_label"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:src="@drawable/blank"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/label_icon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/label_icon"
+            android:textColor="@color/black"
+            android:id="@+id/label_text"
+            android:gravity="left"
+            android:layout_margin="10dp"
+            android:layout_alignParentLeft="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/label_text"
+            android:background="@color/white"
+            android:id="@+id/view" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/button_pink"
+
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/view"
+            android:layout_alignLeft="@+id/label_text"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/fans_num" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/button_pink"
+            android:text="关注"
+            android:textSize="15sp"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:padding="5dp"
+            android:id="@+id/att_label"
+            android:layout_below="@+id/view"
+            android:layout_alignRight="@+id/label_text" />
+        </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/bar"
+        android:orientation="horizontal"
+        android:layout_below="@+id/famous_label"
+        android:background="#E8E8E8"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/the_most"
+            android:background="@drawable/button_transparent"
+            android:text="最  新"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/the_new"
+            android:background="@drawable/button_transparent"
+            android:layout_weight="1"
+            android:text="被赞最多"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            />
+
+
+    </LinearLayout>
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="2dp"
+            android:id="@+id/v_label_bottomline"
+            android:layout_marginLeft="75dp"
+            android:background="@color/pink"/>
+
+        <GridView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="auto_fit"
+            android:verticalSpacing="5dp"
+            android:horizontalSpacing="5dp"
+            android:columnWidth="80dp"
+            android:stretchMode="columnWidth"
+            android:gravity="center"
+            android:id="@+id/gv_label_container"
+            android:fadeScrollbars="true"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:id="@+id/loading">
+            <include
+                layout="@layout/loading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:id="@+id/no_more">
+            <include
+                layout="@layout/no_more"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+    </LinearLayout>
+    </com.harmazing.aixiumama.view.BorderScrollView>
+</LinearLayout>

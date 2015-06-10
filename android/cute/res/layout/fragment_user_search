@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_gravity="center_horizontal">
+
+    <ListView
+        android:id="@+id/listview_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="1dp"
+        android:layoutAnimation="@anim/listview_up_item_anim">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/tv_search_result_none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="80dp"
+        android:gravity="center_horizontal"
+        android:textSize="22sp"
+        android:textColor="@color/font_grey"
+        android:text="没有找到相关结果"
+        android:visibility="gone"/>
+
+</FrameLayout>

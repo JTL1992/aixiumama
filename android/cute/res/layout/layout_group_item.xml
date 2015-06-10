@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="60dp"
+    android:id="@+id/item_list_contacts"
+    android:descendantFocusability="@null"
+    android:orientation="horizontal">
+    <View
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/flag"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/item_head"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_person_head"
+            android:layout_alignParentTop="false"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_vertical|left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="name"
+            android:id="@+id/group_item_name"
+            android:layout_toRightOf="@+id/item_head"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:layout_gravity="center_vertical" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:text="邀请"
+            android:id="@+id/button_invite"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/pink"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:layout_gravity="center_vertical|right"
+            android:gravity="center" />
+    </RelativeLayout>
+
+</LinearLayout>

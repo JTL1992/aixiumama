@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="title_bar_press">#256cb2</color>
+    <color name="bottom_bar_bg">#FFFFFF</color>
+    <color name="title_bar_background">#00000000</color>
+    <color name="bottom_bar_item_on">@color/title_bar_background</color>
+    <color name="black">#ff000000</color>
+    <color name="black_tran">#e0000000</color>
+    <color name="white">#ffffff</color>
+    <color name="grey">#ff58616d</color>
+    <color name="pink">#ff91b9</color>
+    <color name="blue">#0033CC</color>
+    <color name="bg_title">#d0d0d0</color>
+    <color name="bg_setting">#dfdfdf</color>
+    <color name="light_grey">#ebebeb</color>
+    <color name="middle_grey">#dcdcdc</color>
+    <color name="font_grey">#b4b4b4</color>
+    <color name="transparent_black">#e0182021</color>
+    <color name="cute_rank1">#ff9cbb</color>
+    <color name="cute_rank2">#fcb3c6</color>
+    <color name="cute_rank3">#fcc3b2</color>
+    <color name="cute_red">#f67e6e</color>
+
+    <color name="darkgrey">#ff404040</color>
+    <color name="toasterro">#9fd524</color>
+    <color name="lightgrey">#ff888888</color>
+    <color name="semitransparent">#80000000</color>
+    <color name="lightransparent">#a0000000</color>
+
+    <color name="navpage">#FFE1E8EB</color>
+</resources>

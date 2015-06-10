@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.harmazing.aixiumama.activity.CropImageActivity"
+    android:weightSum="1">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.00">
+
+
+
+
+    <com.harmazing.aixiumama.view.DragImageView
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:layout_width="wrap_content"
+        android:id="@+id/touch_view"
+        android:layout_height="wrap_content"
+      />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/transparent_black"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="100dp"
+            android:background="@color/transparent_black"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:id="@+id/line2"
+            android:background="@color/transparent_black"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/bottom_bg"
+            android:layout_gravity="bottom"
+            android:background="@color/transparent_black"/>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/cancel"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:text="取消"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:id="@+id/rotate"
+            android:text="旋转"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/scale"
+            android:src="@drawable/zhoriginal_no"
+
+            android:background="@color/transparent"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:id="@+id/submit"
+            android:text="确定"/>
+
+        </LinearLayout>
+
+
+
+</LinearLayout>

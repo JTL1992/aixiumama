@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="vertical"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent">
+    <!--android:background="@color/transparent">-->
+
+
+        <com.harmazing.aixiumama.view.HMViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/index_top_view"
+        android:layout_gravity="top"
+        android:orientation="vertical"
+        android:background="@color/transparent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/cute_top_bg1"
+        >
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:src="@drawable/cute_index_logo"
+
+
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="84dp"
+            >
+            <android.support.v4.view.ViewPager
+                android:id="@+id/home_fragment_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:layout_centerHorizontal="true" >
+            </android.support.v4.view.ViewPager>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="right"
+                android:orientation="horizontal" >
+                <!-- 放置图片标题的位置 -->
+                <!--<TextView
+                    android:id="@+id/activity_title"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ff0000"
+                    android:textSize="16sp"
+                    android:text="活动"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="5dp"
+                    android:singleLine="true"
+                    />-->
+                <!-- 放置图片中选中点的位置 -->
+                <LinearLayout
+                    android:id="@+id/dots_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginRight="50dp"
+                    android:orientation="horizontal"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:alpha="100"
+        android:id="@+id/recommend_attention_layout"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:id="@+id/recommend"
+            android:text="推荐"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:id="@+id/attention"
+            android:text="关注"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+        <View
+            android:id="@+id/bottom_line"
+            android:layout_width="40dp"
+            android:layout_height="2dp"
+            android:background="@color/pink"
+            android:layout_marginLeft="75dp"
+            android:clickable="false" />
+
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/btn_server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_kefu"
+            android:background="@color/transparent"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="right"/>
+    </LinearLayout>
+
+
+</FrameLayout>

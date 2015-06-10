@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_header_user">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="@drawable/cute_user_bg"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+
+            <ImageButton
+                android:src="@drawable/cute_user_present"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/present"
+                android:background="@drawable/button_transparent"
+                android:layout_alignParentTop="true"
+                />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/gr_back_btn"
+                android:id="@+id/back"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:id="@+id/cute_num"
+                android:textColor="@color/pink"
+                android:layout_marginLeft="25dp"
+                android:layout_alignTop="@+id/user_icon"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                android:text="被赞\n好友排名 0"
+                android:id="@+id/cute_info"
+                android:textSize="15sp"
+                android:layout_above="@+id/mum_name"
+                android:layout_alignTop="@+id/user_icon"
+                android:layout_marginTop="20dp" />
+
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/user_icon"
+                android:minHeight="80dp"
+                android:minWidth="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:layout_below="@+id/user_icon"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/mum_name" />
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:id="@+id/add_friend"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+
+                android:layout_alignParentRight="true"
+
+                android:clickable="true"
+                android:visibility="visible"
+                android:layout_alignTop="@+id/user_icon"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_pink"
+                android:text="邀请好友"
+                android:gravity="center"
+                android:layout_marginRight="10dp" />
+
+            <ImageButton
+                android:src="@drawable/cute_user_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/settings"
+                android:background="@drawable/button_transparent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:src="@drawable/gr_sf_btn"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/person_settings"
+                android:visibility="gone"
+                android:layout_alignParentStart="false" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/des"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:gravity="center" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/photo_layout"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/photos_num"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="照 片"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/att_layout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:id="@+id/follows"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="关 注"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/fans_layout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:id="@+id/fans"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="粉 丝"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/visit_layout"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:id="@+id/favorites"
+                    android:textSize="18sp"
+                    android:text="5"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="来 访"
+                    android:id="@+id/favorite_visited"
+                    android:singleLine="false"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/nine"
+                android:src="@drawable/gr_ico3_hover"
+                android:layout_alignParentLeft="true" />
+            <View
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:id="@+id/nine_line"
+                android:background="@color/pink"
+                android:layout_alignParentBottom="false"
+                android:layout_marginTop="10dp"
+                android:paddingTop="10dp"
+                android:layout_below="@+id/nine"
+                android:layout_marginLeft="15dp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/three"
+                android:src="@drawable/gr_ico2"
+                android:layout_centerHorizontal="true" />
+            <View
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:id="@+id/three_line"
+                android:background="@color/pink"
+                android:layout_alignParentBottom="false"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/three"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/label"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/gr_ico1"
+                android:layout_alignParentRight="true" />
+            <View
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:id="@+id/label_line"
+                android:background="@color/pink"
+                android:layout_alignParentBottom="false"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/label"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/bottom_line"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:background="@color/light_grey"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fl_container_user">
+
+    </FrameLayout>
+    </LinearLayout>
+ </ScrollView>
+</LinearLayout>
+
+

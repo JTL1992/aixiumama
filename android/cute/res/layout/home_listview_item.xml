@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/light_grey"
+    android:id="@+id/ll_cute"
+    android:layout_marginBottom="50dp"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/white"
+       >
+        <ImageView
+            android:layout_width = "60dp"
+            android:layout_height = "60dp"
+            android:id = "@+id/user_icon"
+            android:src="@drawable/blank" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/user_icon"
+            android:layout_marginLeft="13dp"
+            android:id="@+id/linearLayout"
+            android:layout_toLeftOf="@+id/follow_state">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/baby_info"
+                android:textColor="@color/font_grey" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pulisher"
+                android:text="妈妈咪呀"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/follow_state" />
+        </RelativeLayout>
+
+    <com.harmazing.aixiumama.view.LabelImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/label_image"
+        android:background="@color/white"
+        />
+
+    <TextView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/pic_text"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/white_border"
+            android:id="@+id/liked_layout"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/liked_icon"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/pl_ico1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/grey"
+            android:background="@color/transparent"
+            android:id="@+id/liked"
+
+            android:text="0"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/white_border"
+            android:id="@+id/comment_layout"
+            android:layout_toRightOf="@+id/liked_layout"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/pl_ico2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:background="@color/transparent"
+                android:id="@+id/coments"
+                android:textColor="@color/grey"
+                android:text="0"
+               />
+        </LinearLayout>
+
+
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_margin="5dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/pl_dd_btn"
+            android:id="@+id/more" />
+        </RelativeLayout>
+
+    <com.harmazing.aixiumama.view.CutePersonThumbNail
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/cute_head"/>
+
+    <com.harmazing.aixiumama.view.BaseMyListView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:id="@+id/comments_listview"/>
+
+    <include
+        layout="@layout/see_all_comments"
+        android:id="@+id/v_all_comments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

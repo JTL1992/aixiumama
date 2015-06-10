@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#e0000000"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="40dp"
+    android:layout_marginTop="40dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:id="@+id/shield_him"
+        android:gravity="center"
+        android:text="不看他的分享"
+        android:background="@drawable/white_border_stroke"
+
+        android:padding="5dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:id="@+id/shield_me"
+        android:gravity="center"
+        android:text="不让他看我的分享"
+        android:background="@drawable/white_border_stroke"
+        android:padding="5dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:id="@+id/report"
+        android:gravity="center"
+        android:text="举报"
+        android:background="@drawable/white_border_stroke"
+        android:padding="5dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:id="@+id/cancel"
+        android:gravity="center"
+
+        android:text="取消"
+        android:background="@drawable/white_border_stroke"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+</LinearLayout>

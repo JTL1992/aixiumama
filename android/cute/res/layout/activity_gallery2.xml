@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#383838"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/top_view"
+        android:background="@drawable/cute_top_bg1"
+       >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/back"
+            android:layout_marginLeft="10dp"
+
+            android:src="@drawable/title_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+
+            android:text="美化与贴纸"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/button_transparent"
+            android:text="下一步"
+            android:id="@+id/next"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+        </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@+id/top_view"
+        android:background="@color/white"
+        android:id="@+id/frame">
+
+    <ImageView
+        android:id="@+id/iv_gallery_activity"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/iv"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:layout_gravity="center"
+            />
+
+    <com.harmazing.aixiumama.view.HSuperImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:id="@+id/hsuperimageview"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/frame"
+        android:layout_weight="0.03">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#232323"
+
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#232323"
+                    android:id="@+id/beautify_btn"
+                    android:textColor="@color/white"
+                    android:text="美化"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#232323"
+                    android:id="@+id/paper_btn"
+                    android:textColor="@color/white"
+                    android:text="贴纸"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+
+            <com.harmazing.aixiumama.view.HorizontalListView
+                android:id="@+id/horizontallistview"
+                android:layout_width="match_parent"
+                android:layout_height="178dp"
+                android:layout_gravity="center"
+                />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

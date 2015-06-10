@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+	<android.support.v4.app.FragmentTabHost
+        xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@android:id/tabhost"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white" >
+
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+		<!--<View-->
+			<!--android:layout_width="match_parent"-->
+			<!--android:layout_height="1dp"-->
+			<!--android:layout_marginBottom="4dp"-->
+			<!--android:background="@color/grey"/>-->
+
+		<TabWidget
+			android:id="@android:id/tabs"
+			android:layout_alignParentBottom="true"
+			android:orientation="horizontal"
+            android:showDividers="none"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"/>
+
+
+
+</LinearLayout>
+	</android.support.v4.app.FragmentTabHost>
+    <SlidingDrawer
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:content="@+id/content"
+        android:handle="@+id/handle"
+        android:id="@+id/sliding"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/transparent_black">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/share">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/view" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/weixin"
+                    android:layout_alignParentTop="false"
+                    android:layout_below="@+id/text_fenxiangdao"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/icon_weixin" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/pengyouquan"
+                    android:layout_below="@+id/text_fenxiangdao"
+                    android:layout_toLeftOf="@+id/view"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/icon_pengyouquan" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/qq"
+                    android:layout_below="@+id/text_fenxiangdao"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/view"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/icon_qq" />
+
+                <com.harmazing.aixiumama.model.sina.LoginButton
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/weibo"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_below="@+id/text_fenxiangdao"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/icon_weibo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="分享到："
+                    android:id="@+id/text_fenxiangdao"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="微 信"
+                    android:id="@+id/text_weixin"
+                    android:layout_below="@+id/weixin"
+                    android:layout_alignLeft="@+id/weixin"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:layout_margin="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="微 博"
+                    android:id="@+id/text_weibo"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/weibo"
+                    android:layout_alignRight="@+id/weibo"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="QQ 好友"
+                    android:id="@+id/text_qq"
+                    android:layout_below="@+id/qq"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:layout_alignLeft="@+id/qq"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="6dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="朋友圈"
+                    android:id="@+id/text_pengyouquan"
+                    android:layout_below="@+id/pengyouquan"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignLeft="@+id/pengyouquan"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/text_qq"
+                    android:layout_toRightOf="@+id/collection"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="23dp"
+                    android:src="@drawable/ic_delete"
+                    android:id="@+id/delete"
+                    android:visibility="invisible"
+                    />
+                <TextView
+                    android:id="@+id/delete_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/delete"
+                    android:layout_alignLeft="@+id/delete"
+                    android:layout_alignBottom="@+id/text_collection"
+                    android:text="删 除"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:visibility="invisible" />
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/text_qq"
+                    android:layout_toRightOf="@+id/collection"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="23dp"
+                    android:src="@drawable/ic_delete"
+                    android:id="@+id/jubao"
+                    android:visibility="invisible"
+                    />
+                <TextView
+                    android:id="@+id/jubao_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/delete"
+                    android:layout_alignLeft="@+id/delete"
+                    android:layout_alignBottom="@+id/text_collection"
+                    android:text="举 报"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="6dp"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/collection"
+                    android:layout_below="@+id/text_pengyouquan"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignLeft="@+id/pengyouquan"
+                    android:background="@drawable/icon_collection" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="收 藏"
+                    android:id="@+id/text_collection"
+                    android:layout_below="@+id/collection"
+                    android:layout_alignLeft="@+id/collection"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/image_QQkongjian"
+                    android:layout_below="@+id/text_weixin"
+                    android:layout_alignLeft="@+id/weixin"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/icon_qqzone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="QQ空间"
+                    android:id="@+id/text_QQkongjian"
+                    android:layout_below="@+id/image_QQkongjian"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:layout_alignLeft="@+id/image_QQkongjian"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="6dp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/handle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Handle" />
+    </SlidingDrawer>
+</RelativeLayout>

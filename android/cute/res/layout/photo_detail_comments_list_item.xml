@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:paddingTop="10dp"
+    android:id="@+id/item"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/publish_user"
+            android:text="publish_user"
+            android:textColor="@color/pink"/>
+
+
+
+   <!--     <StartCustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/publish_user"
+
+            android:id="@+id/content"
+            android:text="" />-->
+
+        <com.harmazing.aixiumama.view.StartCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="33"
+            android:id="@+id/content"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/publish_user"
+            android:layout_alignParentRight="true" />
+
+        <com.harmazing.aixiumama.view.StartCustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center|left"
+            android:layout_below="@+id/publish_user"
+            android:id="@+id/content2"
+            android:textColor="@color/black"
+            android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+
+</LinearLayout>

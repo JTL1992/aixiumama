@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+     android:padding="5dp"
+    android:clickable="true"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/blank"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/name"
+        android:gravity="center"
+        android:layout_below="@+id/icon"
+        android:layout_alignParentLeft="true"
+        android:ellipsize="end"
+        android:maxEms="4"
+        android:singleLine="true"
+        android:textSize="13sp"
+        android:layout_alignRight="@+id/icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/babyinfo"
+        android:textSize="8sp"
+        android:layout_below="@+id/name"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/font_grey"
+        android:layout_alignRight="@+id/name" />
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_search_result_label"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingLeft="20dp"
+    android:clickable="true"
+    >
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/iv_label"
+        android:src="@drawable/gr_ico1"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_label"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/tv_label_name"
+        android:textColor="#000000"
+        android:text="cute"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:text="已有0张照片"
+        android:textColor="@color/font_grey"
+        android:id="@+id/tv_label_num"/>
+
+</RelativeLayout>

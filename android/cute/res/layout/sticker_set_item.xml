@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:padding="5dp"
+    android:id="@+id/get"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/blank"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/sticker" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="获  取"
+        android:padding="5dp"
+        android:layout_below="@+id/sticker"
+        android:layout_alignRight="@+id/sticker"
+        android:layout_alignLeft="@+id/sticker"
+        android:textColor="@color/white"
+        android:background="@color/pink"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:layout_marginTop="5dp" />
+</RelativeLayout>
